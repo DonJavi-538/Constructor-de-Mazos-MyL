@@ -3,3 +3,14 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+edition:
+    path: /edition/{edslug}
+    controller: App\Controller\EditionController::editionBySlug
+    methods: GET
+
+cardCover:
+    path: /edition/{edid}/card/{cid}/cover
+    controller: App\Controller\EditionController::cardCover
+    methods: GET
+
